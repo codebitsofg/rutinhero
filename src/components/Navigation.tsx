@@ -71,8 +71,8 @@ const Navigation = () => {
       {isMobileMenuOpen && (
         <div className='absolute left-0 top-full w-full bg-white px-4 py-9 shadow-lg md:hidden'>
           <nav className='flex flex-col space-y-9 text-xl'>
-            <NavLink href='/'>Anasayfa</NavLink>
-            <NavLink href='/urunler'>Ürünler</NavLink>
+            <NavLink href='/'>Homepage</NavLink>
+            <NavLink href='/urunler'>Products</NavLink>
             <Link
               href='/creators'
               className='text-purple-500 hover:text-purple-700'

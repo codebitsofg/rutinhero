@@ -17,12 +17,11 @@ const page = () => {
           buttonText='Contact Us'
           imgSrc='/hero-cards.png'
         >
-          <h1 className='font-dm text-6xl font-extrabold leading-[5rem] lg:text-6xl xl:text-8xl xl:leading-[7rem]'>
+          <h1 className='g:text-6xl font-dm text-5xl font-extrabold xl:text-8xl xl:leading-[7rem]'>
             <span className='block'>
-              <span className='text-blue-900'>
-                Strong brands with right involvment
-              </span>
+              <span className='text-blue-500'>Your Dream</span>
             </span>
+            Achievements
           </h1>
         </MainHero>
       </div>
