@@ -75,8 +75,8 @@ const config = {
         },
       },
       fontFamily: {
-        opensans: ['"Open Sans"', 'sans-serif'],
-        dm: ['"Bodoni Moda"', 'serif'],
+        opensans: ['"Nunito Sans"', 'sans-serif'],
+        dm: ['"Merriweather"', 'serif'],
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
