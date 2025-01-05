@@ -5,7 +5,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '../ui/form'
+} from '../../ui/form'
 import { RadioGroup, RadioGroupItem } from '@radix-ui/react-radio-group'
 import { Control } from 'react-hook-form'
 import { CampaignFormValues } from '@/lib/schemas/campaignGeneration'
@@ -15,9 +15,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '../ui/select'
-import { Checkbox } from '../ui/checkbox'
-import { Input } from '../ui/input'
+} from '../../ui/select'
+import { Checkbox } from '../../ui/checkbox'
+import { Input } from '../../ui/input'
 
 const FormCreators = ({
   control,

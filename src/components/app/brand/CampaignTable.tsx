@@ -33,13 +33,19 @@ export function DataTable<TData extends { id: string | number }, TValue>({
 
   return (
     <div className='rounded-2xl bg-white'>
-      <Table>
+      <Table className='w-full table-fixed'>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
+                const columnSize =
+                  (header.column as ColumnDef<TData>).size === 2
+                    ? 'w-[40%]'
+                    : (header.column as ColumnDef<TData>).size === 1
+                      ? 'w-[20%]'
+                      : 'w-[40%]'
                 return (
-                  <TableHead key={header.id}>
+                  <TableHead key={header.id} className={columnSize}>
                     {header.isPlaceholder
                       ? null
                       : flexRender(
@@ -55,26 +61,32 @@ export function DataTable<TData extends { id: string | number }, TValue>({
         <TableBody>
           {table.getRowModel().rows?.length ? (
             table.getRowModel().rows.map((row) => (
-              <Link key={row.id} href={`/app/campaigns/${row.original.id}`}>
-                <TableRow data-state={row.getIsSelected() && 'selected'}>
-                  {row.getVisibleCells().map((cell) => {
-                    const columnSize =
-                      (cell.column as ColumnDef<TData>).size === 2
-                        ? 'w-2/5'
-                        : (cell.column as ColumnDef<TData>).size === 1
-                          ? 'w-1/5'
-                          : 'w-2/5'
-                    return (
-                      <TableCell key={cell.id} className={`${columnSize} `}>
+              <TableRow
+                key={row.id}
+                data-state={row.getIsSelected() && 'selected'}
+              >
+                {row.getVisibleCells().map((cell) => {
+                  const columnSize =
+                    (cell.column as ColumnDef<TData>).size === 2
+                      ? 'w-[40%]'
+                      : (cell.column as ColumnDef<TData>).size === 1
+                        ? 'w-[20%]'
+                        : 'w-[40%]'
+                  return (
+                    <TableCell key={cell.id} className={columnSize}>
+                      <Link
+                        href={`/app/campaigns/${row.original.id}`}
+                        className='block'
+                      >
                         {flexRender(
                           cell.column.columnDef.cell,
                           cell.getContext(),
                         )}
-                      </TableCell>
-                    )
-                  })}
-                </TableRow>
-              </Link>
+                      </Link>
+                    </TableCell>
+                  )
+                })}
+              </TableRow>
             ))
           ) : (
             <TableRow>

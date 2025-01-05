@@ -6,8 +6,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '../ui/select'
-import { Input } from '../ui/input'
+} from '../../ui/select'
+import { Input } from '../../ui/input'
 
 interface Filters {
   platform: string
@@ -37,7 +37,7 @@ const FilterBar = ({ filters, setFilters }: FilterBarProps) => {
             setFilters((prev) => ({ ...prev, platform: value }))
           }
         >
-          <SelectTrigger className='border-[1.5px] border-neutral-300 rounded w-[200px] h-[3.5rem] font-medium text-neutral-700 text-xl'>
+          <SelectTrigger className='h-[3.5rem] w-[200px] rounded border-[1.5px] border-neutral-300 text-xl font-medium text-neutral-700'>
             <SelectValue placeholder='Platform' />
           </SelectTrigger>
           <SelectContent>
@@ -49,11 +49,11 @@ const FilterBar = ({ filters, setFilters }: FilterBarProps) => {
         </Select>
       </div>
 
-      <div className='flex border-[1.5px] border-neutral-300 bg-white rounded overflow-hidden'>
+      <div className='flex overflow-hidden rounded border-[1.5px] border-neutral-300 bg-white'>
         {['Konum', 'Kategori', 'Cinsiyet', 'Yaş', 'Fiyat'].map((filter) => (
           <button
             key={filter}
-            className='border-neutral-400 hover:bg-slate-100 px-4 py-2 font-medium text-neutral-700 text-xl'
+            className='border-neutral-400 px-4 py-2 text-xl font-medium text-neutral-700 hover:bg-slate-100'
           >
             {filter}
           </button>

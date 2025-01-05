@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/select'
 import { Switch } from '@/components/ui/switch'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { DataTable } from '@/components/app/CampaignTable'
+import { DataTable } from '@/components/app/brand/CampaignTable'
 import { columns } from '@/lib/utils/tables/campaignColumn'
 import { Campaign } from '@/lib/types/campaigns'
 

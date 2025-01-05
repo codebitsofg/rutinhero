@@ -7,9 +7,10 @@ import {
   campaignFormSchema,
   type CampaignFormValues,
 } from '@/lib/schemas/campaignGeneration'
-import FormCampaignInfo from './FormCampaignInfo'
 import FormProductInfo from './FormProductInfo'
 import FormCreators from './FormCreators'
+import FormCampaignInfo from './FormCampaignInfo'
+import FormDeliverables from './FormDeliverables'
 
 const BriefForm = () => {
   const form = useForm<CampaignFormValues>({
@@ -18,6 +19,21 @@ const BriefForm = () => {
       name: '',
       goal: 'multi-channel-ugc',
       commission: 'no-commission',
+      mediaType: 'video',
+      format: '9:16',
+      deliveryType: 'ready',
+      videoLength: {
+        min: 15,
+        max: 60,
+      },
+      music: 'no',
+      contentType: 'testimonial',
+      creatorInstructions: {
+        mainContentMessaging: '',
+        mainProductFeatures: [''],
+        requiredActions: '',
+      },
+      creatorAvoidance: '',
     },
   })
 
@@ -34,6 +50,7 @@ const BriefForm = () => {
           <FormCampaignInfo control={form.control} />
           <FormProductInfo control={form.control} register={form.register} />
           <FormCreators control={form.control} register={form.register} />
+          <FormDeliverables control={form.control} register={form.register} />
         </form>
       </Form>
     </div>

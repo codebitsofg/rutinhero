@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="katman_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <rect width="1080" height="1080" rx="211.8" ry="211.8" style="fill: #4e46dc;"/>
+  <g>
+    <g>
+      <path d="M752.38,231.31v206.77h-206.77" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: 53px;"/>
+      <path d="M132.07,575.93c.16-171.29,139.14-310.03,310.44-309.87,76.19.07,149.7,28.18,206.49,78.98l103.39,93.05" style="fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: 53px;"/>
+    </g>
+    <g>
+      <rect x="640.68" y="626.79" width="307.24" height="68.28" rx="17.07" ry="17.07" style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 33px;"/>
+      <path d="M794.31,626.79v221.9" style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 33px;"/>
+      <path d="M913.79,695.06v119.48c0,18.85-15.28,34.14-34.14,34.14h-170.69c-18.85,0-34.14-15.28-34.14-34.14v-119.48" style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 33px;"/>
+      <path d="M717.5,626.79c-23.57,0-42.67-19.11-42.67-42.67s19.11-42.67,42.67-42.67c33.7-.59,64.18,33.28,76.81,85.35,12.64-52.07,43.11-85.93,76.81-85.35,23.57,0,42.67,19.11,42.67,42.67s-19.11,42.67-42.67,42.67" style="fill: none; stroke: #fff; stroke-miterlimit: 10; stroke-width: 33px;"/>
+    </g>
+  </g>
+</svg>

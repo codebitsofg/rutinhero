@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/navigation'
-import { CreatorProfile } from '@/components/app/creator-profile/CreatorProfile'
+import { CreatorProfile } from '@/components/app/brand/creator-profile/CreatorProfile'
 
 export interface Creator {
   id: string

@@ -10,7 +10,13 @@ import {
 } from '@/components/ui/table'
 import { Badge } from '@/components/ui/badge'
 import Image from 'next/image'
-import { Clock, Package } from 'lucide-react'
+import {
+  BadgeCheck,
+  Clock,
+  Eye,
+  MessageCircleMore,
+  Package,
+} from 'lucide-react'
 
 // Dummy data for the table
 const participantsData = [
@@ -21,7 +27,7 @@ const participantsData = [
     shipmentStatus: 'delivered',
     daysLeft: 5,
     taskStatus: 'in_progress',
-    lastUpdate: '2 saat önce',
+    lastUpdate: '2 saat',
   },
   {
     id: 2,
@@ -30,7 +36,7 @@ const participantsData = [
     shipmentStatus: 'pending',
     daysLeft: 3,
     taskStatus: 'completed',
-    lastUpdate: '1 gün önce',
+    lastUpdate: '1 gün',
   },
   {
     id: 3,
@@ -39,7 +45,7 @@ const participantsData = [
     shipmentStatus: 'delivered',
     daysLeft: 7,
     taskStatus: 'in_progress',
-    lastUpdate: '5 saat önce',
+    lastUpdate: '5 saat',
   },
   {
     id: 4,
@@ -48,7 +54,7 @@ const participantsData = [
     shipmentStatus: 'shipped',
     daysLeft: 2,
     taskStatus: 'pending',
-    lastUpdate: '3 gün önce',
+    lastUpdate: '3 gün',
   },
   {
     id: 5,
@@ -57,7 +63,7 @@ const participantsData = [
     shipmentStatus: 'shipped',
     daysLeft: 2,
     taskStatus: 'pending',
-    lastUpdate: '3 gün önce',
+    lastUpdate: '3 gün',
   },
 ]
 
@@ -96,7 +102,8 @@ const ParticipantsTable = () => {
             <TableHead>Kargo Durumu</TableHead>
             <TableHead>Kalan Gün</TableHead>
             <TableHead>Son Durum</TableHead>
-            <TableHead>Son Güncelleme Tarihi</TableHead>
+            <TableHead>Son Güncelleme </TableHead>
+            <TableHead>Eylemler</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -143,6 +150,12 @@ const ParticipantsTable = () => {
               </TableCell>
               <TableCell className='text-lg text-gray-400'>
                 {participant.lastUpdate}
+              </TableCell>
+              <TableCell className='gap-3 text-lg text-neutral-700'>
+                <div className='flex items-center justify-center gap-2'>
+                  <MessageCircleMore strokeWidth={1.7} className='h-7 w-7' />
+                  <Eye strokeWidth={1.7} className='h-7 w-7' />
+                </div>
               </TableCell>
             </TableRow>
           ))}

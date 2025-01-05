@@ -64,7 +64,7 @@ const RequestsTable = () => {
         {requestsData.map((request) => (
           <div
             key={request.id}
-            className='flex items-center justify-between overflow-hidden rounded-2xl border-[1.5px] border-neutral-300 bg-white'
+            className='flex items-center justify-between overflow-hidden rounded-2xl bg-white hover:shadow-sm'
           >
             {/* Left section - Profile info */}
             <div className='flex flex-1 flex-col gap-6 px-6 pb-4 pt-5'>

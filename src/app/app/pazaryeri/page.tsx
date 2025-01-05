@@ -1,5 +1,5 @@
 import React from 'react'
-import CreatorMarketplace from '@/components/app/CreatorMarketplace'
+import CreatorMarketplace from '@/components/app/brand/CreatorMarketplace'
 
 const mockCreators = [
   {
@@ -10,6 +10,7 @@ const mockCreators = [
     averagePrice: 161,
     verified: true,
     badges: ['⭐️', '🎥', '✨'],
+    isBarter: true,
     gallery: [
       '/content/1-1.jpg',
       '/content/1-2.jpg',
@@ -29,6 +30,7 @@ const mockCreators = [
     avatar: '/avatars/jane.jpg',
     country: 'United States',
     averagePrice: 161,
+    isBarter: false,
     verified: true,
     badges: ['⭐️', '🎥', '✨'],
     gallery: [
@@ -51,6 +53,7 @@ const mockCreators = [
     country: 'United States',
     averagePrice: 161,
     verified: true,
+    isBarter: true,
     badges: ['⭐️', '🎥', '✨'],
     gallery: [
       '/content/1-1.jpg',
@@ -72,6 +75,7 @@ const mockCreators = [
     country: 'United States',
     averagePrice: 161,
     verified: true,
+    isBarter: false,
     badges: ['⭐️', '🎥', '✨'],
     gallery: [
       '/content/1-1.jpg',
@@ -92,6 +96,7 @@ const mockCreators = [
     avatar: '/avatars/jane.jpg',
     country: 'United States',
     averagePrice: 161,
+    isBarter: true,
     verified: true,
     badges: ['⭐️', '🎥', '✨'],
     gallery: [

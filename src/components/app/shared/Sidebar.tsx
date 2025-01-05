@@ -36,6 +36,7 @@ const menuItems = [
     title: 'Araç Takımı',
     icon: PencilRuler,
     href: '/app/tools',
+    isComingSoon: true,
   },
   {
     title: 'İçeriklerim',
@@ -53,13 +54,13 @@ const Sidebar = () => {
         {menuItems.map((item) => (
           <Link
             key={item.href}
-            href={item.href}
-            onClick={() => setActiveItem(item.href)}
-            className={`relative flex items-center gap-3 rounded-lg px-5 py-4 text-gray-800 transition-colors hover:bg-slate-100 ${
+            href={item.isComingSoon ? '#' : item.href}
+            onClick={() => !item.isComingSoon && setActiveItem(item.href)}
+            className={`relative flex items-center gap-3 rounded-lg px-5 py-4 text-gray-800 transition-colors ${
               activeItem === item.href
                 ? 'border-2 border-black bg-slate-100'
                 : 'border-2 border-transparent'
-            }`}
+            } ${item.isComingSoon ? 'cursor-default opacity-50' : 'hover:bg-slate-100'}`}
           >
             <item.icon className='h-6 w-6' />
             <span className='text-[17px]'>{item.title}</span>

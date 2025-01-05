@@ -1,6 +1,3 @@
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import Image from 'next/image'
 import React from 'react'
 
 const CampaignDetails = () => {

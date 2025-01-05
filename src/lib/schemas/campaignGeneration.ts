@@ -84,6 +84,45 @@ export const campaignFormSchema = z.object({
     .default([]),
   excludePastCampaigns: z.boolean().default(false),
   manuallyPickCreators: z.boolean().default(false),
+  mediaType: z.enum(['video', 'photo'], {
+    required_error: 'Please select a media type',
+  }),
+  format: z.enum(['9:16', '4:5', '1:1', '16:9'], {
+    required_error: 'Please select a format',
+  }),
+  videoLength: z.object({
+    min: z.number().min(1, 'Minimum length is required'),
+    max: z.number().min(1, 'Maximum length is required'),
+  }),
+  deliveryType: z.enum(['raw', 'ready', 'both'], {
+    required_error: 'Please select a delivery type',
+  }),
+  music: z.enum(['no', 'yes'], {
+    required_error: 'Please select if music is required',
+  }),
+  contentType: z.enum(
+    [
+      'testimonial',
+      'unboxing',
+      'product-demo',
+      'product-review',
+      'how-to',
+      'custom',
+    ],
+    {
+      required_error: 'Please select a content type',
+    },
+  ),
+  creatorInstructions: z.object({
+    mainContentMessaging: z
+      .string()
+      .min(1, 'Main content messaging is required'),
+    mainProductFeatures: z
+      .array(z.string())
+      .min(1, 'At least one product feature is required'),
+    requiredActions: z.string().min(1, 'Required actions are required'),
+  }),
+  creatorAvoidance: z.string().optional(),
 })
 
 export type CampaignFormValues = z.infer<typeof campaignFormSchema>

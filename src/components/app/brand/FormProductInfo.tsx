@@ -5,8 +5,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '../ui/form'
-import { Input } from '../ui/input'
+} from '../../ui/form'
+import { Input } from '../../ui/input'
 import { RadioGroup, RadioGroupItem } from '@radix-ui/react-radio-group'
 import { CircleEllipsis, Dot, InfoIcon } from 'lucide-react'
 import { Control, useWatch } from 'react-hook-form'
@@ -177,7 +177,7 @@ const FormProductInfo = ({
             <>
               <FormLabel>
                 Kampanya Adı
-                <p className='mt-1.5 text-sm font-light text-neutral-400'>
+                <p className='mt-1.5 font-light text-neutral-400 text-sm'>
                   Kampanyan için kısa bir ad gir. Kullanıcılar tarafindan
                   görünür.
                 </p>
@@ -190,7 +190,7 @@ const FormProductInfo = ({
                     {...field}
                     className='pr-16'
                   />
-                  <span className='absolute right-3 top-1/2 -translate-y-1/2 text-sm text-muted-foreground'>
+                  <span className='top-1/2 right-3 absolute text-muted-foreground text-sm -translate-y-1/2'>
                     {field.value.length}/50
                   </span>
                 </div>
@@ -229,11 +229,11 @@ const FormProductInfo = ({
                           />
                           <FormLabel
                             htmlFor={option.value}
-                            className='box-border flex h-full cursor-pointer flex-col items-start rounded-xl border-2 border-neutral-200 bg-popover p-5 px-6 text-left text-lg leading-6 text-neutral-600 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-purple-600 [&:has([data-state=checked])]:border-purple-600'
+                            className='box-border flex flex-col items-start border-2 border-neutral-200 [&:has([data-state=checked])]:border-purple-600 peer-data-[state=checked]:border-purple-600 bg-popover hover:bg-accent px-6 p-5 rounded-xl h-full text-left text-lg text-neutral-600 hover:text-accent-foreground leading-6 cursor-pointer'
                           >
                             {option.label}
-                            <InfoIcon className='absolute right-2 top-2 h-4 w-4' />
-                            <span className='mt-3 text-lg font-light leading-7 text-neutral-400'>
+                            <InfoIcon className='top-2 right-2 absolute w-4 h-4' />
+                            <span className='mt-3 font-light text-lg text-neutral-400 leading-7'>
                               {option.description}{' '}
                             </span>
                           </FormLabel>
@@ -257,7 +257,7 @@ const FormProductInfo = ({
             <>
               <FormLabel>
                 Platform
-                <p className='mt-1.5 text-sm font-light text-neutral-400'>
+                <p className='mt-1.5 font-light text-neutral-400 text-sm'>
                   İçeriği kullanmak istedigin platformu seç.
                 </p>
               </FormLabel>
@@ -266,7 +266,7 @@ const FormProductInfo = ({
                 <RadioGroup
                   onValueChange={field.onChange}
                   defaultValue={field.value}
-                  className='grid grid-cols-4 gap-2 text-center'
+                  className='gap-2 grid grid-cols-4 text-center'
                 >
                   {[
                     {
@@ -296,10 +296,10 @@ const FormProductInfo = ({
                           />
                           <FormLabel
                             htmlFor={option.value}
-                            className='flex min-h-32 cursor-pointer flex-col items-center justify-center gap-3 rounded-xl border-2 border-neutral-300 bg-popover p-4 leading-7 text-neutral-600 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-2 peer-data-[state=checked]:border-purple-600 [&:has([data-state=checked])]:border-purple-600'
+                            className='flex flex-col justify-center items-center gap-3 border-2 border-neutral-300 [&:has([data-state=checked])]:border-purple-600 peer-data-[state=checked]:border-2 peer-data-[state=checked]:border-purple-600 bg-popover hover:bg-accent p-4 rounded-xl min-h-32 text-neutral-600 hover:text-accent-foreground leading-7 cursor-pointer'
                           >
                             {option.label === 'Other' ? (
-                              <CircleEllipsis className='h-6 w-6' />
+                              <CircleEllipsis className='w-6 h-6' />
                             ) : (
                               <img
                                 src={`/dashboard/socials/${option.value.toLocaleLowerCase()}.svg`}
@@ -332,7 +332,7 @@ const FormProductInfo = ({
             <>
               <FormLabel>
                 Kampanya katılımcı sayısı
-                <p className='mt-1.5 text-sm font-light text-neutral-400'>
+                <p className='mt-1.5 font-light text-neutral-400 text-sm'>
                   Select the ideal number of Creators that you're aiming to hire
                   for this campaign. Note - this doesn't restrict the number you
                   can hire in the next stages.
@@ -343,7 +343,7 @@ const FormProductInfo = ({
                 <RadioGroup
                   onValueChange={field.onChange}
                   defaultValue={field.value}
-                  className='grid grid-cols-4 gap-2 text-center'
+                  className='gap-2 grid grid-cols-4 text-center'
                 >
                   {['<5', '5-10', '10-20', '>20'].map((option) => (
                     <FormItem key={option}>
@@ -356,7 +356,7 @@ const FormProductInfo = ({
                           />
                           <FormLabel
                             htmlFor={option}
-                            className='flex min-h-20 cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-neutral-300 bg-popover p-4 leading-7 text-neutral-600 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-2 peer-data-[state=checked]:border-purple-600 [&:has([data-state=checked])]:border-purple-600'
+                            className='flex flex-col justify-center items-center gap-2 border-2 border-neutral-300 [&:has([data-state=checked])]:border-purple-600 peer-data-[state=checked]:border-2 peer-data-[state=checked]:border-purple-600 bg-popover hover:bg-accent p-4 rounded-xl min-h-20 text-neutral-600 hover:text-accent-foreground leading-7 cursor-pointer'
                           >
                             <span
                               dangerouslySetInnerHTML={{

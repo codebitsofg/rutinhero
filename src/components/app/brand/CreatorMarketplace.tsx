@@ -3,8 +3,8 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import { Badge } from '../ui/badge'
-import { Card } from '../ui/card'
+import { Badge } from '../../ui/badge'
+import { Card } from '../../ui/card'
 import FilterBar from './FilterBar'
 import MarketplaceSideBar from './MarketplaceSideBar'
 
@@ -14,6 +14,7 @@ interface Creator {
   avatar: string
   country: string
   averagePrice: number
+  isBarter: boolean
   verified: boolean
   badges: string[]
   gallery: string[]
@@ -57,64 +58,70 @@ const CreatorMarketplace = ({
 
   return (
     <div className='grid grid-cols-[1fr_0.3fr]'>
-      <div className='space-y-4 px-7 py-10 h-[calc(100vh-80px)] overflow-y-scroll'>
+      <div className='h-[calc(100vh-80px)] space-y-4 overflow-y-scroll px-7 py-10'>
         <div className='flex flex-col items-start gap-12'>
           <div className='flex flex-col items-center gap-2'>
-            <h2 className='font-dm font-light text-4xl text-neutral-700'>
+            <h2 className='font-dm text-4xl font-light text-neutral-700'>
               İçerik Üreticileri
             </h2>
           </div>
           <div className='flex items-center gap-2'>
-            <h2 className='font-medium text-2xl text-neutral-700'>Filtreler</h2>
+            <h2 className='text-2xl font-medium text-neutral-700'>Filtreler</h2>
           </div>
         </div>
         <FilterBar filters={filters} setFilters={setFilters} />
 
-        <div className='gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+        <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
           {creators.map((creator) => (
             <Card
               key={creator.id}
-              className='flex flex-col justify-between hover:shadow-md transition-shadow cursor-pointer overflow-hidden'
+              className='relative flex cursor-pointer flex-col justify-between overflow-hidden transition-shadow hover:shadow-md'
               onClick={() => {
                 router.push(`/app/pazaryeri/${creator.id}`)
                 onSelect?.(creator)
               }}
             >
-              <div className='gap-1 grid grid-cols-3 p-2'>
+              <div className='grid grid-cols-3 gap-1 p-2'>
                 {creator.gallery.slice(0, 9).map((image, index) => (
                   <div
                     key={index}
-                    className='relative bg-slate-50 rounded-md w-full h-full overflow-hidden aspect-square'
+                    className='relative aspect-square h-full w-full overflow-hidden rounded-md bg-slate-50'
                   ></div>
                 ))}
               </div>
 
               <div className='p-4'>
-                <div className='flex justify-between items-center'>
+                <div className='flex items-center justify-between'>
                   <div className='flex items-center gap-2'>
                     <div className='relative'>
-                      <div className='bg-neutral-200 rounded-full w-16 h-16'></div>
+                      <div className='h-16 w-16 rounded-full bg-neutral-200'></div>
                       {creator.verified && (
-                        <div className='top-0 right-0 absolute'>
-                          <Badge className='flex justify-center items-center bg-blue-500 p-0 rounded-full w-5 h-5'>
+                        <div className='absolute right-0 top-0'>
+                          <Badge className='flex h-5 w-5 items-center justify-center rounded-full bg-blue-500 p-0'>
                             ✓
                           </Badge>
                         </div>
                       )}
                     </div>
                     <div>
-                      <p className='flex flex-col-reverse justify-center items-center font-medium'>
+                      <p className='flex flex-col-reverse items-center justify-center font-medium'>
                         <span className='text-neutral-700'>{creator.name}</span>
                       </p>
-                      <p className='text-gray-500 text-sm'>{creator.country}</p>
+                      <p className='text-sm text-gray-500'>{creator.country}</p>
                     </div>
                   </div>
                   <div className='text-right'>
                     <p className='font-medium'>~${creator.averagePrice}</p>
-                    <p className='text-gray-500 text-sm'>Ort. Fiyat</p>
+                    <p className='text-sm text-gray-500'>Ort. Fiyat</p>
                   </div>
                 </div>
               </div>
+
+              {creator.isBarter && (
+                <div className='absolute bottom-32 left-7 z-10'>
+                  <img src='/dashboard/barter.svg' className='h-8 w-8' />
+                </div>
+              )}
             </Card>
           ))}
         </div>

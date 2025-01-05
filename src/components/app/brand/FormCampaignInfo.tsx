@@ -5,8 +5,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '../ui/form'
-import { Input } from '../ui/input'
+} from '../../ui/form'
+import { Input } from '../../ui/input'
 import { RadioGroup, RadioGroupItem } from '@radix-ui/react-radio-group'
 import { CircleEllipsis, Dot, InfoIcon } from 'lucide-react'
 import { Control, useWatch } from 'react-hook-form'
