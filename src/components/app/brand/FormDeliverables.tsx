@@ -23,7 +23,7 @@ const FormDeliverables = ({
   return (
     <>
       <h1 className='mb-14 text-[3.4rem] font-medium text-neutral-700'>
-        Sipariş Detayları
+        Order Details
       </h1>
       <div className='rounded-2xl border-[1.5px] border-neutral-300 px-12 py-10 shadow-lg'>
         {/* Media Type */}
@@ -33,9 +33,9 @@ const FormDeliverables = ({
           render={({ field }) => (
             <FormItem className='mb-8 space-y-4'>
               <FormLabel className='text-lg font-medium text-neutral-700'>
-                Medya tipi
+                Media Type
                 <p className='mt-1 text-sm font-normal text-neutral-400'>
-                  Bu kampanyaya hangi medya türünü istiyorsunuz?
+                  What media type do you want to use for this campaign?
                 </p>
               </FormLabel>
               <FormControl>
@@ -82,7 +82,7 @@ const FormDeliverables = ({
               <FormLabel className='text-lg font-medium text-neutral-700'>
                 Format
                 <p className='mt-1 text-sm font-normal text-neutral-400'>
-                  Bu kampanyaya hangi formatta medya istiyorsunuz?
+                  What format do you want to use for this campaign?
                 </p>
               </FormLabel>
               <FormControl>
@@ -132,9 +132,9 @@ const FormDeliverables = ({
           render={({ field }) => (
             <FormItem className='mb-8 space-y-4'>
               <FormLabel className='text-lg font-medium text-neutral-700'>
-                Video uzunluğu
+                Video Length
                 <p className='mt-1 text-sm font-normal text-neutral-400'>
-                  Kreatif varlığınızın süresini seçiniz
+                  Select the length of the creative asset.
                 </p>
               </FormLabel>
               <FormControl>
@@ -169,11 +169,10 @@ const FormDeliverables = ({
           render={({ field }) => (
             <FormItem className='mb-8 space-y-4'>
               <FormLabel className='text-lg font-medium text-neutral-700'>
-                Kullanıma Hazır / Ham
+                Ready to Use / Raw
                 <p className='mt-2 text-sm font-normal text-neutral-400'>
-                  Kreatif varlığınızın hazır kullanılabilir versiyonunu,
-                  yalnızca raw görüntüyü veya her ikisini de istiyorsanız,
-                  oluşturuculara bildirin.
+                  If you want to use the ready-to-use version of the creative
+                  asset, or only the raw image, please notify the creators.
                 </p>
               </FormLabel>
               <FormControl>
@@ -183,11 +182,11 @@ const FormDeliverables = ({
                   className='grid grid-cols-3 justify-items-stretch gap-4'
                 >
                   {[
-                    { value: 'raw', label: 'Ham görüntü' },
-                    { value: 'ready', label: 'Hazır kullanılabilir reklam' },
+                    { value: 'raw', label: 'Raw Image' },
+                    { value: 'ready', label: 'Ready to Use' },
                     {
                       value: 'both',
-                      label: 'Hazır kullanılabilir reklam + Ham görüntü',
+                      label: 'Ready to Use + Raw Image',
                     },
                   ].map((option) => (
                     <FormItem className='h-full' key={option.value}>
@@ -222,9 +221,9 @@ const FormDeliverables = ({
           render={({ field }) => (
             <FormItem className='mb-8 space-y-4'>
               <FormLabel className='text-lg font-medium text-neutral-700'>
-                Müzik
+                Music
                 <p className='mt-1 text-sm font-normal text-neutral-400'>
-                  Kreatif varlığınıza müzik eklemek istiyor musunuz?
+                  Do you want to add music to the creative asset?
                 </p>
               </FormLabel>
               <FormControl>
@@ -269,10 +268,10 @@ const FormDeliverables = ({
           render={({ field }) => (
             <FormItem className='mb-8 space-y-4'>
               <FormLabel className='text-lg font-medium text-neutral-700'>
-                İçerik tipi
+                Content Type
                 <p className='mt-1 text-sm font-normal text-neutral-400'>
-                  Kreatif varlığınızın hangi tipi için oluşturulmasını
-                  istiyorsunuz?
+                  What type of content do you want to create for the creative
+                  asset?
                 </p>
               </FormLabel>
               <FormControl>
@@ -333,8 +332,8 @@ const FormDeliverables = ({
                 <FormLabel className='text-lg font-medium text-neutral-700'>
                   Main content messaging:
                   <p className='mt-1 text-sm font-normal text-neutral-400'>
-                    Kreatif varlığınızın hangi tipi için oluşturulmasını
-                    istiyorsunuz?
+                    What type of content do you want to create for the creative
+                    asset?
                   </p>
                 </FormLabel>
                 <FormControl>
@@ -356,7 +355,7 @@ const FormDeliverables = ({
             render={({ field }) => (
               <FormItem>
                 <FormLabel className='text-lg font-medium text-neutral-700'>
-                  Gerekli eylemler:
+                  Required Actions:
                 </FormLabel>
                 <FormControl>
                   <Input
@@ -379,14 +378,14 @@ const FormDeliverables = ({
             render={({ field }) => (
               <FormItem>
                 <FormLabel className='text-lg font-medium text-neutral-700'>
-                  Kreatiflerin ne yapmaması gerekiyor? (isteğe bağlı)
+                  What should the creators avoid? (optional)
                   <p className='mt-1 text-sm font-normal text-neutral-400'>
-                    Kreatiflerin ne yapmaması gerekiyor?
+                    What should the creators avoid?
                   </p>
                 </FormLabel>
                 <FormControl>
                   <Input
-                    placeholder='Enter things to avoid'
+                    placeholder='Enter things to avoid (optional)'
                     {...field}
                     className='mt-4'
                   />

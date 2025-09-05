@@ -18,7 +18,7 @@ const MainHero = ({
   isReversed = false,
 }: MainHeroProps) => {
   return (
-    <div className='mx-auto max-w-[1650px] px-8 pb-12 pt-32 text-center font-opensans lg:min-h-screen lg:pb-0 lg:pt-12 lg:text-left'>
+    <div className='mx-auto max-w-[1650px] px-8 pb-12 pt-32 text-center font-opensans lg:min-h-screen lg:pb-24 lg:pt-12 lg:text-left'>
       <section
         className={`flex h-full flex-col-reverse items-center justify-center ${
           isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'

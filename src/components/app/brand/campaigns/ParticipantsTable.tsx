@@ -98,12 +98,12 @@ const ParticipantsTable = () => {
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>Katılımcı</TableHead>
-            <TableHead>Kargo Durumu</TableHead>
-            <TableHead>Kalan Gün</TableHead>
-            <TableHead>Son Durum</TableHead>
-            <TableHead>Son Güncelleme </TableHead>
-            <TableHead>Eylemler</TableHead>
+            <TableHead>Participant</TableHead>
+            <TableHead>Shipment Status</TableHead>
+            <TableHead>Days Left</TableHead>
+            <TableHead>Last Status</TableHead>
+            <TableHead>Last Update </TableHead>
+            <TableHead>Actions</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -135,7 +135,7 @@ const ParticipantsTable = () => {
               </TableCell>
               <TableCell>
                 <div className='flex items-center gap-2 text-lg'>
-                  <span>{participant.daysLeft} gün</span>
+                  <span>{participant.daysLeft} days</span>
                 </div>
               </TableCell>
               <TableCell>
@@ -165,7 +165,7 @@ const ParticipantsTable = () => {
       {/* Pagination Controls */}
       <div className='relative flex items-center justify-center bg-neutral-50 p-3 pb-3'>
         <span className='absolute -bottom-8 left-1/2 -translate-x-1/2 text-neutral-300'>
-          Sayfa <strong>{pageIndex + 1}</strong> /{' '}
+          Page <strong>{pageIndex + 1}</strong> /{' '}
           <strong>{Math.ceil(participantsData.length / pageSize)}</strong>
         </span>
         <div>
@@ -174,7 +174,7 @@ const ParticipantsTable = () => {
             disabled={pageIndex === 0}
             className='mr-4 rounded-xl bg-white px-6 py-3'
           >
-            Önceki
+            Previous
           </button>
           <button
             onClick={() =>
@@ -190,7 +190,7 @@ const ParticipantsTable = () => {
             }
             className='rounded-xl bg-white px-6 py-3'
           >
-            Sonraki
+            Next
           </button>
         </div>
       </div>

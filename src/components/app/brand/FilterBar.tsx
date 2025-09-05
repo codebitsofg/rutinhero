@@ -41,7 +41,7 @@ const FilterBar = ({ filters, setFilters }: FilterBarProps) => {
             <SelectValue placeholder='Platform' />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value='all'>Tüm Platformlar</SelectItem>
+            <SelectItem value='all'>All Platforms</SelectItem>
             <SelectItem value='instagram'>Instagram</SelectItem>
             <SelectItem value='tiktok'>TikTok</SelectItem>
             <SelectItem value='youtube'>YouTube</SelectItem>
@@ -50,7 +50,7 @@ const FilterBar = ({ filters, setFilters }: FilterBarProps) => {
       </div>
 
       <div className='flex overflow-hidden rounded border-[1.5px] border-neutral-300 bg-white'>
-        {['Konum', 'Kategori', 'Cinsiyet', 'Yaş', 'Fiyat'].map((filter) => (
+        {['Location', 'Category', 'Gender', 'Age', 'Price'].map((filter) => (
           <button
             key={filter}
             className='border-neutral-400 px-4 py-2 text-xl font-medium text-neutral-700 hover:bg-slate-100'

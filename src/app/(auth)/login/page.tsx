@@ -17,7 +17,7 @@ import { Input } from '@/components/ui/input'
 import { Card } from '@/components/ui/card'
 import Link from 'next/link'
 import { signIn } from 'next-auth/react'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
 const loginSchema = z.object({
   email: z.string().email('Invalid email address'),
@@ -28,7 +28,7 @@ type LoginFormValues = z.infer<typeof loginSchema>
 
 export default function LoginPage() {
   const router = useRouter()
-  const searchParams = useSearchParams()
+  //const searchParams = useSearchParams()
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -76,7 +76,7 @@ export default function LoginPage() {
       }
 
       // Redirect to the intended page or dashboard
-      const callbackUrl = searchParams.get('from') || '/app'
+      const callbackUrl = '/app'
       router.push(callbackUrl)
     } catch (error) {
       setError(error instanceof Error ? error.message : 'Invalid credentials')
@@ -96,10 +96,10 @@ export default function LoginPage() {
         <div className='space-y-6'>
           <div className='text-center'>
             <h1 className='font-dm text-4xl font-bold text-neutral-700'>
-              Hoşgeldin
+              Welcome
             </h1>
             <p className='mt-4 text-neutral-500'>
-              Hesabınıza giriş yapmak için bilgilerini gir.
+              Enter your email and password to login to your account.
             </p>
           </div>
 
@@ -110,7 +110,7 @@ export default function LoginPage() {
                 name='email'
                 render={({ field }) => (
                   <FormItem className='space-y-3'>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>Email Adresi</FormLabel>
                     <FormControl>
                       <Input
                         placeholder='Enter your email'
@@ -129,7 +129,7 @@ export default function LoginPage() {
                 name='password'
                 render={({ field }) => (
                   <FormItem className='space-y-3'>
-                    <FormLabel>Password</FormLabel>
+                    <FormLabel>Şifre</FormLabel>
                     <FormControl>
                       <Input
                         placeholder='Enter your password'
@@ -147,18 +147,18 @@ export default function LoginPage() {
 
               <Button
                 type='submit'
-                className='h-16 w-full bg-neutral-600 text-xl'
+                className='h-16 w-full bg-purple-600 text-xl'
                 disabled={isLoading}
               >
-                {isLoading ? 'Giriş Yapılıyor...' : 'Giriş Yap'}
+                {isLoading ? 'Logging in...' : 'Login'}
               </Button>
             </form>
           </Form>
 
           <div className='text-md text-center'>
-            Hesabın yok mu?{' '}
+            Don't have an account?{' '}
             <Link href='/signup' className='font-medium text-primary'>
-              Hesap oluştur
+              Create account
             </Link>
           </div>
         </div>

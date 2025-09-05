@@ -39,7 +39,7 @@ const ImageUpload = () => {
       <div className='flex-1 space-y-4'>
         <div>
           <h2 className='text-xl tracking-tight text-neutral-600'>
-            Ürünü Görseli
+            Product Image
           </h2>
           <p className='mt-1 text-base leading-relaxed text-neutral-400'>
             Upload a high quality picture of your product to attract the
@@ -56,13 +56,7 @@ const ImageUpload = () => {
             {...register('productImage', {
               onChange: handleFileChange,
             })}
-            ref={(e) => {
-              fileInputRef.current = e
-              const { ref } = register('productImage')
-              if (typeof ref === 'function') {
-                ref(e)
-              }
-            }}
+            ref={fileInputRef}
           />
 
           <button
@@ -71,7 +65,7 @@ const ImageUpload = () => {
             className='inline-flex h-full items-center justify-center gap-2 rounded-md border border-gray-300 bg-white px-4 py-3 text-base text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
           >
             <UploadIcon className='h-5 w-5' />
-            Görseli Yükle
+            Upload Image
           </button>
 
           {errors.productImage && (

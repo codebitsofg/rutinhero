@@ -72,8 +72,8 @@ const ChatPage = () => {
   return (
     <div className='flex h-[calc(100vh-80px)] bg-white'>
       {/* Sidebar */}
-      <div className='flex w-80 flex-col border-r'>
-        <div className='border-b p-4'>
+      <div className='flex w-80 flex-col border-r-[1.5px] border-neutral-200'>
+        <div className='h-[70px] border-b-[1.5px] border-neutral-200 p-4'>
           <Input type='search' placeholder='Search' className='bg-gray-100' />
         </div>
         <div className='flex-1 overflow-y-auto'>
@@ -113,7 +113,7 @@ const ChatPage = () => {
       {/* Main Chat Area */}
       <div className='flex flex-1 flex-col'>
         {/* Chat Header */}
-        <div className='flex items-center gap-3 border-b p-4'>
+        <div className='flex h-[70px] items-center gap-3 border-b-[1.5px] border-neutral-200 p-4'>
           <Image
             src='/dashboard/avatar.svg'
             alt='Current chat'
@@ -159,13 +159,13 @@ const ChatPage = () => {
         </div>
 
         {/* Message Input */}
-        <div className='flex w-full gap-2 border-t bg-white p-4'>
+        <div className='flex w-full gap-2 border-t-[1.5px] border-neutral-200 bg-white p-4'>
           <Input
             type='text'
-            placeholder='Bir şeyler yaz...'
+            placeholder='Write something...'
             className='h-14 flex-1'
           />
-          <Button className='h-full'>Gönder</Button>
+          <Button className='h-full'>Send</Button>
         </div>
       </div>
     </div>

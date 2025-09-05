@@ -17,7 +17,7 @@ const WhyUGC = () => {
         <div className='mb-24 flex flex-col-reverse items-center gap-16 md:flex-row'>
           <div className='flex-[0.4] space-y-6'>
             <h2 className='font-dm text-5xl font-medium md:text-6xl md:leading-[1.3]'>
-              Neden UGC Kullanmalısınız?
+              Why Use UGC?
               <br className='hidden md:inline' />
             </h2>
             <p className='py-6 text-justify text-lg text-gray-300 md:text-left'>
@@ -35,7 +35,7 @@ const WhyUGC = () => {
               size='lg'
               className='mt-6 w-full rounded-3xl bg-slate-600 py-10 text-xl text-primary-foreground text-white md:w-auto'
             >
-              Kampanya oluştur
+              Create Campaign
             </Button>
           </div>
 
@@ -50,7 +50,7 @@ const WhyUGC = () => {
 
         <div>
           <h3 className='mb-12 text-center font-dm text-5xl italic text-gray-300 md:text-5xl'>
-            Gerçek Sonuçlar
+            Real Results
           </h3>
           <div className='grid grid-cols-2 gap-6 lg:grid-cols-4'>
             {metrics.map((metric, index) => (
@@ -72,7 +72,7 @@ const WhyUGC = () => {
 
       <div className='mx-auto max-w-[1200px] pt-32 text-center md:pt-48'>
         <h2 className='mb-8 text-center font-dm text-4xl font-medium leading-tight md:text-5xl'>
-          Görevler Ve Sonuçlar Birarada
+          Tasks and Results Together
         </h2>
         <p className='text-justify text-gray-300 md:text-left'>
           Consumers trust the opinions of other shoppers more than traditional

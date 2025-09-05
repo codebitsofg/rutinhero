@@ -8,9 +8,7 @@ const Features = () => {
           How does it work?
         </h2>
         <h1 className='mb-8 text-center font-dm text-3xl font-medium md:text-5xl md:leading-[1.2]'>
-          Kampanya oluştur, başvuruları değerlendir,
-          <br />
-          hedeflerine ulaş
+          Create Campaign and review applications
         </h1>
         <div className='mt-16 grid grid-cols-1 gap-8 md:grid-cols-3'>
           <FeatureCard

@@ -8,7 +8,7 @@ const CompleteFormBlock = () => {
       <div className='flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center'>
         <div className='flex items-center gap-2 text-slate-700'>
           <SmileIcon className='h-5 w-5 text-green-600' />
-          <span className='text-lg'>Devam etmek için bilgileri tamamla</span>
+          <span className='text-lg'>Complete the information to continue</span>
         </div>
         <Button
           variant='ghost'
@@ -17,7 +17,7 @@ const CompleteFormBlock = () => {
             console.log('Show missing fields clicked')
           }}
         >
-          Eksik kısımları görüntüle
+          View missing fields
         </Button>
       </div>
     </div>

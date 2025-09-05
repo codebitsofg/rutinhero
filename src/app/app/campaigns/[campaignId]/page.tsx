@@ -91,11 +91,10 @@ const Page = () => {
             </div>
             <div className='flex flex-row items-start justify-start gap-3'>
               <div className='flex items-center justify-center gap-2 text-nowrap rounded-xl border-[1.5px] border-neutral-300 bg-neutral-50 p-3 text-base font-semibold'>
-                <PlusCircle strokeWidth={1.5} className='h-6 w-6' /> Katılımcı
-                Ekle
+                <PlusCircle strokeWidth={1.5} className='h-6 w-6' /> Participant
               </div>
               <div className='flex items-center justify-center gap-2 text-nowrap rounded-xl border-[1.5px] border-neutral-300 bg-neutral-50 p-3 text-base font-semibold'>
-                <PenBoxIcon strokeWidth={1.5} className='h-6 w-6' /> Düzenle
+                <PenBoxIcon strokeWidth={1.5} className='h-6 w-6' /> Edit
               </div>
               <TaskProgressChart data={taskCompletionData} />
             </div>
@@ -105,15 +104,15 @@ const Page = () => {
             <TabsList className='mb-8'>
               <TabsTrigger value='requests'>
                 <Users className='mr-2 h-4 w-4' />
-                İstekler
+                Requests
               </TabsTrigger>
               <TabsTrigger value='participants'>
                 <Users className='mr-2 h-4 w-4' />
-                Katılımcılar
+                Participants
               </TabsTrigger>
               <TabsTrigger value='content'>
                 <ImageIcon className='mr-2 h-4 w-4' />
-                Çıktılar
+                Outputs
               </TabsTrigger>
             </TabsList>
 

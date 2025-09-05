@@ -39,14 +39,14 @@ export default function SignUpPage() {
           />
         </div>
         <div className='absolute bottom-0 left-0 flex w-full items-center justify-start gap-6 px-6 pb-3'>
-          <Link href='/about' className={linkStyle}>
-            Hakkımızda
+          <Link href='#' className={linkStyle}>
+            About
           </Link>
-          <Link href='/privacy' className={linkStyle}>
-            Gizlilik
+          <Link href='#' className={linkStyle}>
+            Privacy
           </Link>
-          <Link href='/terms' className={linkStyle}>
-            Şartlar
+          <Link href='#' className={linkStyle}>
+            Terms
           </Link>
         </div>
       </div>
@@ -56,12 +56,12 @@ export default function SignUpPage() {
           <div className='w-full max-w-[50%] space-y-6 text-left'>
             <div className=''>
               <h1 className='font-dm text-4xl font-bold text-neutral-700'>
-                Hesap türünü seç
+                Choose your account type
               </h1>
               <p className='mt-4 text-neutral-500'>
-                Platformu üretici olarak kullanmak istiyorsanız, üretici
-                seçeneğini, kampanya yönetimi için kullanmak istiyorsanız,
-                kampanya seçeneğini seçebilirsiniz.
+                If you want to use the platform as a creator, you can choose the
+                creator option, if you want to use the platform for campaign
+                management, you can choose the campaign option.
               </p>
             </div>
 
@@ -76,9 +76,9 @@ export default function SignUpPage() {
               >
                 <Target className='h-10 w-10' strokeWidth={1} />
                 <div className='text-left'>
-                  <div className='font-dm text-lg font-semibold'>Marka</div>
+                  <div className='font-dm text-lg font-semibold'>Brand</div>
                   <div className='text-sm font-light'>
-                    içerik üreticileriyle işbirliği yapmak istiyorum
+                    I want to collaborate with content creators
                   </div>
                 </div>
               </Button>
@@ -93,11 +93,9 @@ export default function SignUpPage() {
               >
                 <ImagePlay className='h-10 w-10' strokeWidth={1} />
                 <div className='text-left'>
-                  <div className='font-dm text-lg font-semibold'>
-                    İçerik Üreticisi
-                  </div>
+                  <div className='font-dm text-lg font-semibold'>Creator</div>
                   <div className='text-sm font-light'>
-                    Markalarla işbirliği yapmak istiyorum
+                    I want to collaborate with brands
                   </div>
                 </div>
               </Button>

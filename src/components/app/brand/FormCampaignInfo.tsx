@@ -36,16 +36,16 @@ const FormCampaignInfo = ({
     'multi-channel-ugc': [
       {
         value: 'scaled-ugc',
-        label: 'Coklu UGC Üretimi',
+        label: 'Multi-Channel UGC Production',
         description:
-          'Pazarlama ihtiyacına uygun kreatifler üretmek için kullanılır. Üretilen içerikler tüm haklarıyla markaya aittir',
+          'Used to produce creative content for campaign goals by users.',
       },
 
       {
         value: 'influencer-collaboration',
-        label: 'Influencer İşbirligi',
+        label: 'Influencer Collaboration',
         description:
-          'Brief doğrultusunda üretilen içerikler influencerlar tarafından sosyal medya platformlarında yayınlanır.',
+          'Content produced under the brief is published by influencers on social media platforms.',
       },
     ],
     reach: [
@@ -53,15 +53,15 @@ const FormCampaignInfo = ({
         value: 'barter',
         label: 'Barter',
         description:
-          'Seçtiğin içerik üreticitilerine ürün gönde ve içerik elde et. Dilediğin sayıda ürün gönderebilirsin ve içerik üreticilerinden paylaşımda bulunmasını isteyebilirsin.',
+          'Send products to content creators, produce free UGC and gain engagement.',
       },
     ],
     engagement: [
       {
         value: 'tasks',
-        label: 'Görevler',
+        label: 'Tasks',
         description:
-          'Görevler ve ödüller belirle ve kullanıcıların kampanyaya katılarak, pazarlama hedeflerine ulaşmana yardım etmesini sağla. Topluluk kurallarını ihlal etmediği ve moderasyon tarafından onaylandığı sürece dileğin görevi ve ödülü belirleyebilirsin.',
+          'Set tasks and rewards, select participants, increase engagement and follow a flexible strategy.',
       },
     ],
   }
@@ -75,17 +75,16 @@ const FormCampaignInfo = ({
           <FormItem>
             <>
               <FormLabel>
-                Kampanya Adı
+                Campaign Name
                 <p className='mt-1 text-base text-neutral-400'>
-                  Kampanyan için kısa bir ad gir. Kullanıcılar tarafindan
-                  görünür.
+                  Enter a short name for the campaign. Will be visible to users.
                 </p>
               </FormLabel>
 
               <FormControl>
                 <div className='relative'>
                   <Input
-                    placeholder='Örn: Rutin Hero 2024'
+                    placeholder='Eg: Rutin Hero 2024'
                     {...field}
                     className='pr-16'
                   />
@@ -106,7 +105,7 @@ const FormCampaignInfo = ({
         render={({ field }) => (
           <FormItem className='space-y-3'>
             <>
-              <FormLabel>Kampanya Hedefi</FormLabel>
+              <FormLabel>Campaign Goal</FormLabel>
               <FormControl>
                 <RadioGroup
                   onValueChange={field.onChange}
@@ -116,15 +115,15 @@ const FormCampaignInfo = ({
                   {[
                     {
                       value: 'multi-channel-ugc',
-                      label: 'Cok Kanallı <br/> UGC Üretimi',
+                      label: 'Multi-Channel <br/> UGC Production',
                     },
                     {
                       value: 'reach',
-                      label: 'Hedef Kitle <br/>  Erişimi',
+                      label: 'Target Audience <br/> Reach',
                     },
                     {
                       value: 'engagement',
-                      label: 'Etkileşim',
+                      label: 'Engagement',
                     },
                   ].map((option) => (
                     <FormItem key={option.value}>
@@ -163,7 +162,7 @@ const FormCampaignInfo = ({
         render={({ field }) => (
           <FormItem className='space-y-3'>
             <>
-              <FormLabel>Kampanya Stratejisi</FormLabel>
+              <FormLabel>Campaign Strategy</FormLabel>
               <FormControl>
                 <RadioGroup
                   onValueChange={field.onChange}
@@ -212,7 +211,7 @@ const FormCampaignInfo = ({
               <FormLabel>
                 Platform
                 <p className='mt-1 text-base text-neutral-400'>
-                  İçeriği kullanmak istedigin platformu seç.
+                  Select the platform you want to use the content on.
                 </p>
               </FormLabel>
 
@@ -285,7 +284,7 @@ const FormCampaignInfo = ({
           <FormItem className='space-y-3'>
             <>
               <FormLabel>
-                Kampanya katılımcı sayısı
+                Campaign participant count
                 <p className='mt-1 text-base leading-relaxed text-neutral-400'>
                   Select the ideal number of Creators that you're aiming to hire
                   for this campaign. Note - this doesn't restrict the number you

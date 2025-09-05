@@ -13,13 +13,13 @@ const page = () => {
     <div className='text-center md:text-left'>
       <div className=''>
         <MainHero
-          description="Günümüz dünyasında, müşteri yolculuğunun her aşamasında incelemeler, geri bildirimler, sosyal paylaşımlar ve kullanıcı tarafından oluşturulan diğer içerikler aracılığıyla tüketicilerin sesi her zamankinden daha yüksek çıkıyor. Daha fazla müşteri etkileşimi sağlamak, dönüşümleri artırmak ve kalıcı sadakat oluşturmak için markaların UGC'yi geniş ölçekte toplamasına, yönetmesine ve etkinleştirmesine yardımcı oluyoruz."
-          buttonText='İletişime Geç'
+          description="In today's world, the voice of consumers is louder than ever, thanks to reviews, feedback, social shares, and other user-generated content. We help brands collect, manage, and activate UGC at scale to drive more customer engagement, conversions, and long-term loyalty."
+          buttonText='Contact Us'
           imgSrc='/hero-brand.png'
           isReversed={true}
         >
           <h1 className='font-dm text-5xl font-bold text-neutral-800 lg:text-6xl xl:text-[6rem] xl:leading-[6rem]'>
-            <span className='block'>Markanın sesi </span>
+            <span className='block'>Your Brand's Voice</span>
           </h1>
         </MainHero>
       </div>

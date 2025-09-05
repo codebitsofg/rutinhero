@@ -43,7 +43,7 @@ const BriefForm = () => {
   return (
     <div className='flex flex-col px-32 py-16'>
       <h1 className='mb-14 text-[3.4rem] font-medium text-neutral-700'>
-        Kampanya Detayları
+        Campaign Details
       </h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-14'>

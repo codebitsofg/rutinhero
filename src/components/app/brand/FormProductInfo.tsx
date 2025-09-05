@@ -23,7 +23,9 @@ const FormProductInfo = ({
 }) => {
   return (
     <>
-      <h1 className='mb-14 text-[3.4rem] font-medium text-neutral-700'>Ürün</h1>
+      <h1 className='mb-14 text-[3.4rem] font-medium text-neutral-700'>
+        Product
+      </h1>
       <ImageUpload />
       <FormField
         control={control}
@@ -32,9 +34,9 @@ const FormProductInfo = ({
           <FormItem className='space-y-3'>
             <>
               <FormLabel>
-                Ürün Teslimatı
+                Product Delivery
                 <p className='mt-1 text-base text-neutral-400'>
-                  Ürünlerin kullanıcıya nasıl teslim edileceğini seç
+                  Select how the products will be delivered to the user
                 </p>
               </FormLabel>
               <FormControl>
@@ -46,11 +48,11 @@ const FormProductInfo = ({
                   {[
                     {
                       value: 'not-required',
-                      label: 'Gerekli Değil',
+                      label: 'Not Required',
                     },
                     {
                       value: 'shipment',
-                      label: 'Kargo ile Teslimat',
+                      label: 'Shipment',
                     },
                   ].map((option) => (
                     <FormItem key={option.value}>
@@ -90,16 +92,16 @@ const FormProductInfo = ({
           <FormItem>
             <>
               <FormLabel>
-                Ürün Adı
+                Product Name
                 <p className='mt-1 text-base text-neutral-400'>
-                  Tanıtılacak ürünlerin adını gir.
+                  Enter the name of the products to be introduced.
                 </p>
               </FormLabel>
 
               <FormControl>
                 <div className='relative'>
                   <Input
-                    placeholder='Örn: Rutin Hero 2024'
+                    placeholder='Eg: Rutin Hero 2024'
                     {...field}
                     className='pr-16'
                   />
@@ -118,17 +120,18 @@ const FormProductInfo = ({
           <FormItem>
             <>
               <FormLabel>
-                Açıklama
+                Description
                 <p className='mt-1 text-base text-neutral-400'>
-                  Ürünlerin tanıtımını gir. Ürünlerin özelliklerini ve
-                  linklerini de ekleyebilirsiniz.
+                  Enter the description of the products. You can also add the
+                  features and links of the products. linklerini de
+                  ekleyebilirsiniz.
                 </p>
               </FormLabel>
 
               <FormControl>
                 <div className='relative'>
                   <Input
-                    placeholder='Örn: Rutin Hero 2024'
+                    placeholder='Eg: Rutin Hero 2024'
                     {...field}
                     className='pr-16'
                   />
@@ -147,10 +150,10 @@ const FormProductInfo = ({
           <FormItem>
             <>
               <FormLabel>
-                Ürün Linki
+                Product Link
                 <p className='mt-1 text-base text-neutral-400'>
-                  Ürünlerin linkini gir. Ürünlerin tanıtımını ve özelliklerini
-                  de ekleyebilirsiniz.
+                  Enter the link of the products. You can also add the
+                  description and features of the products. de ekleyebilirsiniz.
                 </p>
               </FormLabel>
 

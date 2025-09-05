@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/navigation'
 import { CreatorProfile } from '@/components/app/brand/creator-profile/CreatorProfile'
+import { Loader2 } from 'lucide-react'
 
 export interface Creator {
   id: string
@@ -63,7 +64,11 @@ export default function CreatorPage({
   }, [params.creatorId])
 
   if (!creator) {
-    return <div className='p-8'>Loading...</div>
+    return (
+      <div className='flex h-full w-full items-center justify-center p-8'>
+        <Loader2 className='h-10 w-10 animate-spin text-blue-500' />
+      </div>
+    )
   }
 
   return (

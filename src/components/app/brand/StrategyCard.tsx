@@ -1,6 +1,7 @@
 import { ArrowRight, AudioWaveform } from 'lucide-react'
 import React, { ReactNode } from 'react'
 import { Button } from '../../ui/button'
+import Link from 'next/link'
 
 interface CardProps {
   title: string
@@ -22,7 +23,7 @@ const StrategyCard = ({ title, description, icon, image }: CardProps) => {
       <img src={image} alt='' className='my-6' />
       <Button className='group mt-12 flex items-center gap-2 px-5 py-8 hover:bg-purple-700'>
         <span className='hidden text-lg font-light group-hover:inline'>
-          Brief Oluştur
+          <Link href='/app/campaigns/1/brief'>Brief Oluştur</Link>
         </span>
         <ArrowRight className='h-6 w-6' />
       </Button>

@@ -9,39 +9,39 @@ export function withRoleProtection(
   allowedRoles: AllowedRoles,
 ) {
   return function ProtectedComponent(props: any) {
-    const { data: session, status } = useSession()
-    const router = useRouter()
+    // const { data: session, status } = useSession()
+    // const router = useRouter()
 
-    useEffect(() => {
-      if (status === 'loading') return
+    // useEffect(() => {
+    //   if (status === 'loading') return
 
-      if (!session) {
-        router.push('/login')
-        return
-      }
+    //   if (!session) {
+    //     router.push('/login')
+    //     return
+    //   }
 
-      const userRole = session.user.userType
-      const roles = Array.isArray(allowedRoles) ? allowedRoles : [allowedRoles]
+    //   const userRole = session.user.userType
+    //   const roles = Array.isArray(allowedRoles) ? allowedRoles : [allowedRoles]
 
-      if (!roles.includes(userRole)) {
-        router.push('/app') // Redirect to dashboard or appropriate page
-      }
-    }, [session, status, router])
+    //   if (!roles.includes(userRole)) {
+    //     router.push('/app') // Redirect to dashboard or appropriate page
+    //   }
+    // }, [session, status, router])
 
-    if (status === 'loading') {
-      return <div>Loading...</div> // You can replace this with a proper loading component
-    }
+    // if (status === 'loading') {
+    //   return <div>Loading...</div> // You can replace this with a proper loading component
+    // }
 
-    if (!session) {
-      return null
-    }
+    // if (!session) {
+    //   return null
+    // }
 
-    const userRole = session.user.userType
-    const roles = Array.isArray(allowedRoles) ? allowedRoles : [allowedRoles]
+    // const userRole = session.user.userType
+    // const roles = Array.isArray(allowedRoles) ? allowedRoles : [allowedRoles]
 
-    if (!roles.includes(userRole)) {
-      return null
-    }
+    // if (!roles.includes(userRole)) {
+    //   return null
+    // }
 
     return <WrappedComponent {...props} />
   }

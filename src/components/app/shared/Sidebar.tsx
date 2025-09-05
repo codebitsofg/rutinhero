@@ -13,35 +13,36 @@ import {
 
 const menuItems = [
   {
-    title: 'Başlayalım',
+    title: 'Start Here',
     icon: PlayCircle,
     href: '/app',
   },
   {
-    title: 'Kampanyalarım',
+    title: 'My Campaigns',
     icon: FolderOpen,
     href: '/app/campaigns',
   },
   {
-    title: 'Sohbet',
+    title: 'Chat',
     icon: MessageCircle,
     href: '/app/chat',
   },
   {
-    title: 'Pazar Yeri',
+    title: 'Marketplace',
     icon: Store,
     href: '/app/pazaryeri',
   },
   {
-    title: 'Araç Takımı',
+    title: 'Tools',
     icon: PencilRuler,
     href: '/app/tools',
     isComingSoon: true,
   },
   {
-    title: 'İçeriklerim',
+    title: 'My Content',
     icon: Film,
     href: '/creatives',
+    isComingSoon: true,
   },
 ]
 

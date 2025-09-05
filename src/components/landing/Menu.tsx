@@ -21,7 +21,7 @@ const Menu = () => {
       </button>
       {isOpen && (
         <div className='absolute right-0 mt-2 flex w-48 items-center justify-center rounded-md bg-white py-1 shadow-lg'>
-          <Link href={'/'}>Anasayfa</Link>
+          <Link href={'/'}>Home</Link>
         </div>
       )}
     </div>

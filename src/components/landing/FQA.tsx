@@ -74,11 +74,11 @@ const FQA = () => {
       </div>
 
       <div className='mb-8 mt-12 flex items-center justify-center gap-4'>
-        <Button className='border border-neutral-800 bg-transparent text-neutral-800'>
+        <Button className='rounded-[20px] border border-purple-500 bg-transparent px-8 py-6 text-purple-500'>
           <User2Icon className='mr-2 h-4 w-4' />
           Signup
         </Button>
-        <Button>
+        <Button className='rounded-[20px] bg-purple-500 px-8 py-6'>
           <MessageCircle className='mr-2 h-4 w-4' />
           Contact Us
         </Button>

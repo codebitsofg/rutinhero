@@ -103,9 +103,9 @@ export function SignUpForm({ userType, onBack }: SignUpFormProps) {
           <ArrowLeft className='h-10 w-10' />
         </Button>
         <div>
-          <h1 className='font-dm text-4xl font-bold'>Hesap oluştur</h1>
+          <h1 className='font-dm text-4xl font-bold'>Create account</h1>
           <p className='mt-4 text-neutral-500'>
-            Hesap oluşturmak için detaylarını gir.
+            Enter your details to create an account.
           </p>
         </div>
       </div>
@@ -117,7 +117,7 @@ export function SignUpForm({ userType, onBack }: SignUpFormProps) {
             name='name'
             render={({ field }) => (
               <FormItem className='space-y-3'>
-                <FormLabel>İsim</FormLabel>
+                <FormLabel>Name</FormLabel>
                 <FormControl>
                   <Input
                     placeholder='Enter your name'
@@ -135,7 +135,7 @@ export function SignUpForm({ userType, onBack }: SignUpFormProps) {
             name='email'
             render={({ field }) => (
               <FormItem className='space-y-3'>
-                <FormLabel>Email</FormLabel>
+                <FormLabel>Email Address</FormLabel>
                 <FormControl>
                   <Input
                     placeholder='Enter your email'
@@ -154,7 +154,7 @@ export function SignUpForm({ userType, onBack }: SignUpFormProps) {
             name='password'
             render={({ field }) => (
               <FormItem className='space-y-3'>
-                <FormLabel>Şifre</FormLabel>
+                <FormLabel>Password</FormLabel>
                 <FormControl>
                   <Input
                     placeholder='Create a password'
@@ -175,15 +175,15 @@ export function SignUpForm({ userType, onBack }: SignUpFormProps) {
             className='h-16 w-full rounded-xl bg-neutral-600 text-lg'
             disabled={isLoading}
           >
-            {isLoading ? 'Hesap oluşturuluyor...' : 'Hesap oluştur'}
+            {isLoading ? 'Creating account...' : 'Create account'}
           </Button>
         </form>
       </Form>
 
       <div className='text-center text-sm'>
-        Hesabın var mı?{' '}
+        Do you have an account?{' '}
         <Link href='/login' className='font-medium text-primary'>
-          Giriş yap
+          Login
         </Link>
       </div>
     </div>

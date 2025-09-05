@@ -29,7 +29,7 @@ const FormCreators = ({
   return (
     <>
       <h1 className='mb-14 text-[3.4rem] font-medium text-neutral-700'>
-        İçerik Üreticileri
+        Content Creators
       </h1>
 
       {/* Brief Privacy */}
@@ -39,7 +39,7 @@ const FormCreators = ({
         render={({ field }) => (
           <FormItem className='space-y-3'>
             <FormLabel>
-              Brief Gizliliği
+              Brief Privacy
               <p className='mt-1 text-base text-neutral-400'>
                 Select "Public" if you want all the creators that fit your
                 criteria to apply and "Private" if you want to manually add
@@ -83,12 +83,12 @@ const FormCreators = ({
       {/* Basic Filters Section */}
       <div className='pt-10'>
         <h3 className='mb-12 text-3xl font-medium leading-none text-neutral-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70'>
-          Temel Filtreler
+          Basic Filters
         </h3>
 
         <div className='mb-10'>
           <h3 className='text-2xl font-normal leading-none text-neutral-700'>
-            İçerik Üreticileri
+            Content Creators
           </h3>
         </div>
         <div className='mb-12 grid grid-cols-2 gap-4'>
@@ -98,7 +98,7 @@ const FormCreators = ({
             name='creatorFilters.country'
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Şehir</FormLabel>
+                <FormLabel>City</FormLabel>
                 <Select onValueChange={field.onChange} value={field.value}>
                   <FormControl>
                     <SelectTrigger>
@@ -121,7 +121,7 @@ const FormCreators = ({
             name='creatorFilters.gender'
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Cinsiyet</FormLabel>
+                <FormLabel>Gender</FormLabel>
                 <Select onValueChange={field.onChange} value={field.value}>
                   <FormControl>
                     <SelectTrigger>
@@ -169,7 +169,7 @@ const FormCreators = ({
               name='creatorFilters.age.min'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Yaş</FormLabel>
+                  <FormLabel>Age</FormLabel>
                   <FormControl>
                     <Input
                       type='number'
@@ -209,10 +209,10 @@ const FormCreators = ({
         render={({ field }) => (
           <FormItem className='space-y-3'>
             <FormLabel>
-              Örnek Stil
+              Example Style
               <p className='mt-1 text-base text-neutral-400'>
-                Ürün için oluşturulacak içeriğe benzer diğer içerikleri veya
-                profilleri ekleyebilirsiniz.
+                You can add similar content or profiles to the content created
+                for the product.
               </p>
             </FormLabel>
             <FormControl>

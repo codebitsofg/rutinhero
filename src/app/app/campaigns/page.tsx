@@ -22,12 +22,12 @@ const page = () => {
     <div className='mx-auto px-24 py-5'>
       <div className='mb-8 flex items-center justify-between'>
         <h1 className='font-dm text-4xl font-light text-neutral-700'>
-          Kampanyalar
+          Campaigns
         </h1>
         <div className='flex items-center gap-6'>
           <Button className='h-14 w-48 gap-2 bg-neutral-700 py-4 text-lg'>
             <Plus className='h-4 w-4' />
-            Yeni Kampanya
+            New Campaign
           </Button>
         </div>
       </div>
@@ -36,15 +36,15 @@ const page = () => {
         <div className='flex items-start justify-stretch gap-2'>
           <Tabs defaultValue='active'>
             <TabsList>
-              <TabsTrigger value='active'>Aktif Kampanyalar</TabsTrigger>
-              <TabsTrigger value='drafts'>Draflar</TabsTrigger>
-              <TabsTrigger value='closed'>Tamamlanmışlar</TabsTrigger>
+              <TabsTrigger value='active'> Active Campaigns</TabsTrigger>
+              <TabsTrigger value='drafts'>Drafts</TabsTrigger>
+              <TabsTrigger value='closed'>Closed</TabsTrigger>
             </TabsList>
           </Tabs>
 
           <div className='flex-1 gap-4 self-stretch overflow-hidden'>
             <Input
-              placeholder='Kampanya Ara...'
+              placeholder='Campaign Search...'
               className='h-full rounded-[12px] border-none bg-white py-[1.05rem] outline-white ring-white'
             />
           </div>
@@ -59,7 +59,7 @@ const data: Campaign[] = [
   {
     id: '1',
     name: 'sdgsdgg',
-    subtitle: 'Test — User-Generated Content',
+    subtitle: 'Test - User-Generated Content',
     avatar: '/placeholder.svg?height=40&width=40',
     date: '21 December 2024, 15:47',
     status: 'draft',
@@ -68,7 +68,7 @@ const data: Campaign[] = [
   {
     id: '2',
     name: 'Test',
-    subtitle: 'Test — User-Generated Content',
+    subtitle: 'Test - User-Generated Content',
     avatar: '/placeholder.svg?height=40&width=40',
     date: '17 December 2024, 23:46',
     status: 'draft',

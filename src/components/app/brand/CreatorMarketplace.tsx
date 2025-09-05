@@ -62,11 +62,11 @@ const CreatorMarketplace = ({
         <div className='flex flex-col items-start gap-12'>
           <div className='flex flex-col items-center gap-2'>
             <h2 className='font-dm text-4xl font-light text-neutral-700'>
-              İçerik Üreticileri
+              Content Creators
             </h2>
           </div>
           <div className='flex items-center gap-2'>
-            <h2 className='text-2xl font-medium text-neutral-700'>Filtreler</h2>
+            <h2 className='text-2xl font-medium text-neutral-700'>Filters</h2>
           </div>
         </div>
         <FilterBar filters={filters} setFilters={setFilters} />
@@ -112,7 +112,7 @@ const CreatorMarketplace = ({
                   </div>
                   <div className='text-right'>
                     <p className='font-medium'>~${creator.averagePrice}</p>
-                    <p className='text-sm text-gray-500'>Ort. Fiyat</p>
+                    <p className='text-sm text-gray-500'>Average Price</p>
                   </div>
                 </div>
               </div>

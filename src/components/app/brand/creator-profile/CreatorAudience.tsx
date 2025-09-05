@@ -25,17 +25,17 @@ const ageData = [
 
 export const CreatorAudience = () => (
   <div className='p-6'>
-    <h2 className='mb-8 font-medium text-3xl'>Kitle</h2>
+    <h2 className='mb-8 text-3xl font-medium'>Audience</h2>
 
     <div className='space-y-12'>
       {/* Gender Split */}
       <div>
-        <div className='flex items-center gap-1 mb-4'>
-          <h3 className='text-neutral-500 text-sm'>Cinsiyet Dağılımı</h3>
-          <Info className='w-4 h-4 text-neutral-400' />
+        <div className='mb-4 flex items-center gap-1'>
+          <h3 className='text-sm text-neutral-500'>Gender Distribution</h3>
+          <Info className='h-4 w-4 text-neutral-400' />
         </div>
         <div className='flex items-center gap-8'>
-          <div className='w-48 h-48'>
+          <div className='h-48 w-48'>
             <ResponsiveContainer width='100%' height='100%'>
               <PieChart>
                 <Pie
@@ -56,11 +56,11 @@ export const CreatorAudience = () => (
             {genderData.map((item) => (
               <div key={item.name} className='flex items-center gap-2'>
                 <div
-                  className='rounded-full w-3 h-3'
+                  className='h-3 w-3 rounded-full'
                   style={{ backgroundColor: item.color }}
                 />
                 <span className='text-sm'>{item.name}</span>
-                <span className='font-medium text-sm'>{item.value}%</span>
+                <span className='text-sm font-medium'>{item.value}%</span>
               </div>
             ))}
           </div>
@@ -69,9 +69,9 @@ export const CreatorAudience = () => (
 
       {/* Age Split */}
       <div>
-        <div className='flex items-center gap-1 mb-4'>
-          <h3 className='text-neutral-500 text-sm'>Yaş Dağılımı</h3>
-          <Info className='w-4 h-4 text-neutral-400' />
+        <div className='mb-4 flex items-center gap-1'>
+          <h3 className='text-sm text-neutral-500'>Age Distribution</h3>
+          <Info className='h-4 w-4 text-neutral-400' />
         </div>
         <div className='h-48'>
           <ResponsiveContainer width='100%' height='100%'>

@@ -13,7 +13,7 @@ const MarketplaceSideBar = () => {
           onClick={() => router.push('/app/campaigns/create')}
           className='h-14 w-full rounded-lg bg-white text-lg font-medium text-indigo-600 transition-colors'
         >
-          Kampanya Oluştur
+          Create Campaign
         </Button>
       </div>
     </div>

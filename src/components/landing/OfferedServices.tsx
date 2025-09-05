@@ -7,7 +7,7 @@ const OfferedServices = () => {
     <div className='bg-stone-50 pb-12 text-justify md:pb-40 md:text-left'>
       <div className='mx-auto max-w-[1100px] px-8 py-20 xl:px-0'>
         <h3 className='mb-32 text-center font-dm text-5xl font-medium text-neutral-800 md:text-7xl'>
-          Servisler
+          Your HERO's
         </h3>
         <section className='grid items-center gap-12 md:grid-cols-[0.7fr_1fr]'>
           <div className='order-2 md:order-1'>

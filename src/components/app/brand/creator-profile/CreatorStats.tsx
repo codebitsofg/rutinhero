@@ -10,7 +10,7 @@ const StatsItem = ({
 }) => (
   <div>
     <div className='flex items-center gap-1 text-neutral-500'>
-      <span className='font-normal text-neutral-400 text-sm'>{label}</span>
+      <span className='text-sm font-normal text-neutral-400'>{label}</span>
     </div>
     <p className={`mt-1 text-base font-semibold`}>{value}</p>
   </div>
@@ -18,16 +18,16 @@ const StatsItem = ({
 
 export const CreatorStats = ({ creator }: { creator: Creator }) => (
   <div className='p-6'>
-    <div className='gap-x-12 gap-y-6 grid grid-cols-3'>
-      <StatsItem label='Takipçiler' value={creator.followers} />
-      <StatsItem label='Konum' value={creator.location} />
-      <StatsItem label='Etkileşim Oranı' value={creator.engagementRate} />
-      <StatsItem label='~ Yorum' value={creator.avgComments} />
-      <StatsItem label='~ Beğeni' value={creator.avgLikes} />
-      <StatsItem label='~ Görüntülenme' value={creator.avgViews} />
+    <div className='grid grid-cols-3 gap-x-12 gap-y-6'>
+      <StatsItem label='Followers' value={creator.followers} />
+      <StatsItem label='Location' value={creator.location} />
+      <StatsItem label='Engagement Rate' value={creator.engagementRate} />
+      <StatsItem label='~ Comments' value={creator.avgComments} />
+      <StatsItem label='~ Likes' value={creator.avgLikes} />
+      <StatsItem label='~ Views' value={creator.avgViews} />
       <StatsItem label='CPE' value={`$${creator.cpe}`} />
       <StatsItem label='CPV / video' value={`$${creator.cpv}`} />
-      <StatsItem label='~ Görüntülenme' value={creator.medianViews} />
+      <StatsItem label='~ Views' value={creator.medianViews} />
     </div>
   </div>
 )

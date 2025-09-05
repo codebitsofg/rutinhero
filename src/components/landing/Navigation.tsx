@@ -37,8 +37,8 @@ const Navigation = () => {
         <div className='flex items-center gap-12'>
           <img src='/brand-logo.svg' className='w-52' alt='Brand Logo' />
           <div className='hidden gap-8 text-[0.65rem] font-medium md:flex md:text-[1.1rem]'>
-            <NavLink href='/'>Anasayfa</NavLink>
-            <NavLink href='/urunler'>Ürünler</NavLink>
+            <NavLink href='/'>Home</NavLink>
+            <NavLink href='/urunler'>Products</NavLink>
           </div>
         </div>
 
@@ -47,13 +47,13 @@ const Navigation = () => {
             className='flex h-3 items-center justify-center rounded-full border border-purple-500 px-8 py-5 text-lg font-light text-purple-500'
             variant='outline'
           >
-            <Link href='/creators'>İçerik Üreticileri</Link>
+            <Link href='/signup'>Signup</Link>
           </Button>
           <Button
             variant='default'
             className='flex h-10 items-center justify-center rounded-3xl bg-purple-600 px-10 py-[23px] text-lg text-white'
           >
-            <Link href='/urunler/1'>Örnek Ürün</Link>
+            <Link href='/app'>Dashboard</Link>
           </Button>
         </div>
 
@@ -71,19 +71,16 @@ const Navigation = () => {
       {isMobileMenuOpen && (
         <div className='absolute left-0 top-full w-full bg-white px-4 py-9 shadow-lg md:hidden'>
           <nav className='flex flex-col space-y-9 text-xl'>
-            <NavLink href='/'>Anasayfa</NavLink>
-            <NavLink href='/urunler'>Ürünler</NavLink>
+            <NavLink href='/'>Home</NavLink>
+            <NavLink href='/urunler'>Products</NavLink>
             <Link
-              href='/creators'
+              href='/signup'
               className='text-purple-500 hover:text-purple-700'
             >
-              İçerik Üreticileri
+              Sign Up
             </Link>
-            <Link
-              href='/urunler/1'
-              className='text-blue-600 hover:text-blue-800'
-            >
-              Örnek Ürün
+            <Link href='/app' className='text-blue-600 hover:text-blue-800'>
+              Dashboard
             </Link>
           </nav>
         </div>

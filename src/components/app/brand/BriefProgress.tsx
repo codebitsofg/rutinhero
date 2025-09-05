@@ -6,27 +6,27 @@ const BriefProgress = () => {
   const [step, setStep] = useState(false)
   const steps = [
     {
-      name: 'Kampanya Bilgileri',
+      name: 'Campaign Information',
       href: '#',
       status: 'current',
     },
     {
-      name: 'Ürün',
+      name: 'Product',
       href: '#',
       status: 'upcoming',
     },
     {
-      name: 'Üreticiler',
+      name: 'Creators',
       href: '#',
       status: 'upcoming',
     },
     {
-      name: 'Sipariş',
+      name: 'Order',
       href: '#',
       status: 'upcoming',
     },
     {
-      name: 'Eklemeler',
+      name: 'Additions',
       href: '#',
       status: 'upcoming',
     },

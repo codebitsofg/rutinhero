@@ -9,7 +9,7 @@ import { Campaign } from '@/lib/types/campaigns'
 export const columns: ColumnDef<Campaign>[] = [
   {
     accessorKey: 'name',
-    header: 'Kampanya',
+    header: 'Campaign',
     size: 2,
     cell: ({ row }) => {
       return (
@@ -39,7 +39,7 @@ export const columns: ColumnDef<Campaign>[] = [
   },
   {
     accessorKey: 'date',
-    header: 'Oluşturulma Tarihi',
+    header: 'Creation Date',
     size: 2,
     cell: ({ row }) => {
       return (
@@ -49,7 +49,7 @@ export const columns: ColumnDef<Campaign>[] = [
   },
   {
     accessorKey: 'status',
-    header: 'Son Durum',
+    header: 'Last Status',
     size: 1,
     cell: ({ row }) => {
       return (
@@ -59,13 +59,13 @@ export const columns: ColumnDef<Campaign>[] = [
             className='h-8 bg-orange-50 text-sm text-orange-600 hover:bg-orange-100'
           >
             <Lock className='mr-2 h-4 w-4' />
-            Yayınlamak için kredi satın al
+            Buy credits to publish
           </Button>
           <Button
             variant='ghost'
             className='h-auto bg-slate-100 py-2 text-sm text-neutral-500'
           >
-            <Pencil className='mr-2 h-4 w-4' /> Devam et
+            <Pencil className='mr-2 h-4 w-4' /> Continue
           </Button>
         </div>
       )

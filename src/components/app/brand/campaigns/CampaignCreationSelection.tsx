@@ -11,13 +11,13 @@ const CampaignCreationSelection = () => {
     <div className='space-y-16 px-12 pt-10'>
       <section className='space-y-6'>
         <h1 className='font-dm text-4xl font-light text-gray-700'>
-          1. Kampanya Hedefini Seç
+          1. Campaign Goal
         </h1>
         <div className='grid grid-cols-1 gap-4 text-gray-600 md:grid-cols-3'>
           {[
-            { title: 'Çok Kanallı UGC Üretimi', id: 'ugc' },
-            { title: 'Hedef Kitle Erişimi', id: 'reach' },
-            { title: 'Etkileşim', id: 'engagement' },
+            { title: 'Multi-Channel UGC Production', id: 'ugc' },
+            { title: 'Target Audience Reach', id: 'reach' },
+            { title: 'Engagement', id: 'engagement' },
           ].map(({ title, id }) => (
             <Button
               key={id}
@@ -33,7 +33,7 @@ const CampaignCreationSelection = () => {
 
       <section className='space-y-6'>
         <h1 className='font-dm text-4xl font-light text-gray-700'>
-          2. Kampanya Stratejisini Seç
+          2. Campaign Strategy
         </h1>
         <div className='grid grid-cols-1 gap-12 text-gray-600 md:grid-cols-4'>
           {strategies[selectedGoal].map((strategy) => (

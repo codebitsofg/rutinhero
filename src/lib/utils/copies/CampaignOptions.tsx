@@ -15,18 +15,18 @@ export interface Strategies {
 export const strategies: Strategies = {
   ugc: [
     {
-      title: 'Çoklu UGC Üretimi',
+      title: 'Multi-Channel UGC Production',
       description:
-        'Kullanıcı tarafından oluşturulmuş, kampanya hedeflerine uygun kreatifler üretmek için kullanılır.',
+        'Used to produce creative content for campaign goals by users.',
       icon: (
         <AudioWaveform className='mb-4 block text-xl font-light text-blue-800' />
       ),
       image: '/dashboard/options-ugc.png',
     },
     {
-      title: 'Influencer İşbirligi',
+      title: 'Influencer Collaboration',
       description:
-        'Markanının sesini yansıtacak influencerlarla işbirliği için kullanılır. Onaylanan içerikler influencerlar tarafından yayınlanır.',
+        "Used for collaboration with influencers to reflect the brand's voice. Approved content is published by influencers.",
       icon: (
         <Handshake className='mb-4 block text-xl font-light text-red-800' />
       ),
@@ -35,18 +35,18 @@ export const strategies: Strategies = {
   ],
   reach: [
     {
-      title: 'Barter ',
+      title: 'Barter Exchange',
       description:
-        'Ürünlerini seçtiğin içerik üreticilerine gönder, istediğin sayıda ücretsiz UGC üret ve etkileşim kazan.',
+        'Send your products to content creators, produce free UGC and gain engagement.',
       icon: <Gift className='mb-4 block text-xl font-light text-green-800' />,
       image: '/dashboard/win-win.png',
     },
   ],
   engagement: [
     {
-      title: 'Görevler',
+      title: 'Tasks',
       description:
-        'Hedeflerin doğultusunda görevler ve ödüller belirle, katılımcıları seç, etkileşimini arttır ve esnek bir strateji izle.',
+        'Set tasks and rewards, select participants, increase engagement and follow a flexible strategy.',
       icon: <Medal className='mb-4 block text-xl font-light text-yellow-800' />,
       image: '/dashboard/tasks.png',
     },
