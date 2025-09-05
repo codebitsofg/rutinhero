@@ -44,12 +44,6 @@ const Navigation = () => {
 
         <div className='hidden items-center gap-2 text-white md:flex'>
           <Button
-            className='flex h-3 items-center justify-center rounded-full border border-purple-500 px-8 py-5 text-lg font-light text-purple-500'
-            variant='outline'
-          >
-            <Link href='/signup'>Signup</Link>
-          </Button>
-          <Button
             variant='default'
             className='flex h-10 items-center justify-center rounded-3xl bg-purple-600 px-10 py-[23px] text-lg text-white'
           >
@@ -73,12 +67,7 @@ const Navigation = () => {
           <nav className='flex flex-col space-y-9 text-xl'>
             <NavLink href='/'>Home</NavLink>
             <NavLink href='/urunler'>Products</NavLink>
-            <Link
-              href='/signup'
-              className='text-purple-500 hover:text-purple-700'
-            >
-              Sign Up
-            </Link>
+
             <Link href='/app' className='text-blue-600 hover:text-blue-800'>
               Dashboard
             </Link>
