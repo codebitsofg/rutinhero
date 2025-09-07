@@ -28,6 +28,7 @@ export default function RootLayout({
     <html lang='en'>
       <head>
         <link rel='icon' href='/apple-icon.png' />
+        <title>Rutin Hero</title>
       </head>
       {!isMobile ? (
         <body className='w-screen overflow-x-hidden'>
